@@ -7,6 +7,6 @@ def add_order(order_id, orders=None):
     orders.append(order_id)
     return orders
 
-print(add_order(101))
-print(add_order(102))
-print(add_order(103))
+print(add_order(2021))
+print(add_order(2312))
+print(add_order(2323))
