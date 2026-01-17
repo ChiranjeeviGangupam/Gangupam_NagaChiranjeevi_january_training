@@ -3,6 +3,6 @@ def count_message(msg, count=0):
     print(f"Message: {msg}, Count: {count}")
     return count
 
-count_message("heya")
-count_message("hello")
-count_message("again")
+count_message("This is chiru")
+count_message("the one")
+count_message("salaar")
