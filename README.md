@@ -1,39 +1,83 @@
-<h1>Conclusion section</h1>
-<h2>Which missing value handling method worked best (e.g., mean, median, mode) 
-and why </h2>
-<p>Median Imputation — BEST for numerical features<br>
-Mode Imputation — BEST for categorical features<br>
-Mean Imputation — NOT recommended here<br>
-  In the Google Play Store dataset, median imputation performed best for numerical features due to skewed distributions and outliers, while mode imputation was most effective for categorical features as it preserves the most frequent category. This combination resulted in better machine learning model performance.<br>
-  Mean imputation for numerical data and mode imputation for categorical data worked best because they handle skewness, outliers, and preserve data distribution, improving ML accuracy.
+<h1 align="center">📌 Conclusion</h1>
+
+<hr>
+
+<h2>🧩 Missing Value Handling</h2>
+
+<ul>
+  <li><b>Median Imputation</b> — Best for numerical features</li>
+  <li><b>Mode Imputation</b> — Best for categorical features</li>
+  <li><b>Mean Imputation</b> — Not recommended</li>
+</ul>
+
+<p>
+In the <b>Google Play Store dataset</b>, numerical features show skewed distributions and contain outliers.
+<b>Median imputation</b> performed best as it is robust to extreme values and preserves realistic data distribution.
+For categorical features, <b>mode imputation</b> was most effective because it retains the most frequent category.
+This combination resulted in better machine learning model stability and accuracy.
 </p>
-<h2>Which categorical encoding techniques performed better for different types of 
-features and why </h2>
-<p>Categorical Encoding Techniques – Performance Summary<br>
-One-Hot Encoding performed best for low-cardinality nominal features (e.g., Type, Content Rating) because it avoids introducing false ordinal relationships and works well with most ML models.<br>
-Label Encoding was suitable only for binary or truly ordinal features, as it assigns integer values while preserving order when it exists.<br>
-Frequency Encoding worked better for high-cardinality features (e.g., App, Genres) because it reduces dimensionality and prevents sparse feature spaces.<br>
-Binary Encoding provided a good balance for very high-cardinality features, offering compact representation with minimal information loss.<br></p>
-<p>One-Hot Encoding for low-cardinality features and Frequency/Binary Encoding for high-cardinality features delivered the best overall ML performance by preserving meaning while controlling feature explosion.<br></p>
 
-<h2>Which feature scaling method was most effective and why </h2>
-<p>Standardization (Z-score scaling) was the most effective feature scaling method.<br>
-It scales features to zero mean and unit variance, making it ideal for ML models sensitive to feature magnitude.<br>
-It handled different ranges and outliers better than Min-Max scaling and improved convergence and overall model performance.</p>
-<p>Standardization performed best because it normalizes feature distributions without compressing outliers, leading to more stable and accurate ML models.</p>
+<hr>
 
-<h2>Key observations from outlier treatment and skewness transformation</h2>
+<h2>🏷️ Categorical Encoding Techniques</h2>
 
-<p>Key Observations: Outlier Treatment & Skewness Transformation<br>
+<ul>
+  <li>
+    <b>One-Hot Encoding</b> performed best for <b>low-cardinality nominal features</b> 
+    (e.g., Type, Content Rating) as it avoids introducing false ordinal relationships.
+  </li>
+  <li>
+    <b>Label Encoding</b> was suitable only for <b>binary or truly ordinal features</b>, 
+    where category order is meaningful.
+  </li>
+  <li>
+    <b>Frequency Encoding</b> worked well for <b>high-cardinality features</b> 
+    (e.g., App, Genres) by reducing dimensionality.
+  </li>
+  <li>
+    <b>Binary Encoding</b> provided a compact representation for <b>very high-cardinality features</b>
+    with minimal information loss.
+  </li>
+</ul>
 
-Outlier treatment (using IQR/percentile capping) reduced the influence of extreme values, leading to more stable model training and improved prediction accuracy.<br>
+<p>
+Overall, <b>One-Hot Encoding</b> for low-cardinality features and 
+<b>Frequency/Binary Encoding</b> for high-cardinality features delivered the best ML performance
+by preserving feature meaning while controlling dimensionality.
+</p>
 
-Highly skewed features such as Reviews and Size benefited significantly from log transformation, resulting in more symmetric distributions.<br>
-After transformation, features showed better linear relationships with the target variable.
-ML models became less biased toward extreme values and converged faster.<br>
-Overall, combining outlier handling with skewness correction improved model robustness and generalization.</p>
+<hr>
 
+<h2>📏 Feature Scaling</h2>
 
+<p>
+<b>Standardization (Z-score scaling)</b> was the most effective feature scaling method.
+It scales features to zero mean and unit variance, making it ideal for ML models sensitive to feature magnitude.
+Compared to Min-Max scaling, it handled different feature ranges and outliers better,
+resulting in faster convergence and improved model performance.
+</p>
 
+<hr>
 
+<h2>📊 Outlier Treatment & Skewness Transformation</h2>
 
+<ul>
+  <li>
+    Outlier treatment using <b>IQR / percentile capping</b> reduced the influence of extreme values.
+  </li>
+  <li>
+    Highly skewed features such as <b>Reviews</b> and <b>Size</b> benefited from 
+    <b>log transformation</b>, producing more symmetric distributions.
+  </li>
+  <li>
+    Feature transformations improved linear relationships with the target variable.
+  </li>
+  <li>
+    ML models became less biased toward extreme values and showed faster convergence.
+  </li>
+</ul>
+
+<p>
+Combining outlier handling with skewness correction significantly improved
+<b>model robustness, generalization, and predictive performance</b>.
+</p>
