@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Assignment 03 - Linear Regression</title>
-</head>
 <body>
 
 <h1>📘 Assignment 03: Linear Regression</h1>
@@ -50,13 +46,6 @@ using Linear Regression.
 <h2>📈 2. Exploratory Data Analysis (EDA)</h2>
 
 <p>EDA was conducted to understand data distribution and relationships.</p>
-
-<h3>Visualizations Used</h3>
-<ul>
-    <li>Scatter plot between YearsExperience and Salary</li>
-    <li>Histogram to observe salary distribution</li>
-    <li>Correlation analysis</li>
-</ul>
 
 <h3>Observations</h3>
 <ul>
@@ -107,7 +96,20 @@ Lower MSE indicates a better fit.
 <p>
 Measures how well the model explains the variance in the target variable.
 R² value closer to 1 indicates a better fit.
+    
 </p>
+<p>
+Training Set Metrics:<br>
+MAE  (Average Error)          : 3898.18<br>
+MSE  (Penalizes large errors) : 38554414.69<br>
+RMSE (Interpretable large error): 6209.22<br>
+R² Score (Relative performance): 0.98<br>
+
+Test Set Metrics:<br>
+MAE  (Average Error)          : 11581.23<br>
+MSE  (Penalizes large errors) : 353170847.48<br>
+RMSE (Interpretable large error): 18792.84<br>
+R² Score (Relative performance): 0.85<br></p>
 
 <h3>Interpretation</h3>
 <ul>
