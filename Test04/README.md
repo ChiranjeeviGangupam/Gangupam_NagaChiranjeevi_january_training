@@ -34,7 +34,7 @@ feature engineering, feature scaling, and supervised machine learning models.
 <b>Feature Types:</b>
 <ul>
   <li><b>Numerical:</b> Living area, lot area, bedrooms, bathrooms, floors, latitude, longitude</li>
-  <li><b>Categorical:</b> Condition, grade, waterfront, postal code</li>
+  <li><b>Categorical:</b>Price_class for SVM,KNN</li>
 </ul>
 
 <hr>
@@ -250,5 +250,6 @@ relationships and outliers.
 
 <li>Jupyter Notebook</li>
 </ul>
+
 
 
