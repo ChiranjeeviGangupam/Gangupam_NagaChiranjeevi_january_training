@@ -111,6 +111,15 @@ MSE  : 5090689684.55
 RMSE : 71349.07
 R²   : 0.92
 </pre>
+<p>Regression Models (Predicting 'Price')<br>
+Linear Regression:<br>
+
+Test Set MAE: 53,549.78<br>
+Test Set RMSE: 71,349.07<br>
+Test Set R²: 0.92<br>
+Interpretation: Provides a good baseline, but has relatively high error margins compared to tree-based models.<br>
+
+</p>
 
 <h3>2. Decision Tree Regressor</h3>
 <pre>
@@ -139,7 +148,20 @@ MAE  : 6751.50
 RMSE : 12529.54
 R²   : 1.00
 </pre>
+<p>Decision Tree Regressor (Initial):<br>
 
+Test Set MAE: 7,997.70<br>
+Test Set RMSE: 14,895.53<br>
+Test Set R²: 1.00<br>
+Interpretation: Shows much lower errors than Linear Regression, but an R² of 1.00 with non-zero MAE/RMSE suggests potential overfitting or that minor errors are not significantly impacting the R² due to the nature of the data/capping. Tuning was necessary.<br>
+Decision Tree Regressor (Tuned with GridSearchCV):<br>
+
+Best Hyperparameters: max_depth=10, min_samples_leaf=3, min_samples_split=10<br>
+Test Set MAE: 6,751.50<br>
+Test Set RMSE: 12,529.54<br>
+Test Set R²: 1.00<br>
+Interpretation: Tuning significantly improved the MAE and RMSE compared to the initial Decision Tree, indicating better generalization.</p>
+<br>
 <h3>3. Random Forest Regressor</h3>
 <pre>
 Training Set:
@@ -152,7 +174,12 @@ MAE  : 6233.52
 RMSE : 10947.86
 R²   : 1.00
 </pre>
+<p>Random Forest Regressor (Initial):<br>
 
+Test Set MAE: 6,233.52<br>
+Test Set RMSE: 10,947.86<br>
+Test Set R²: 1.00<br>
+Interpretation: Even without full hyperparameter tuning (which was interrupted), the initial Random Forest Regressor demonstrated the lowest MAE and RMSE among all regression models on the test set. This aligns with the project's conclusion that Random Forest performs best for this task.<br></p>
 <h3>4. K-Nearest Neighbors (KNN)</h3>
 <pre>
 Training Accuracy : 0.9678
@@ -171,6 +198,13 @@ Confusion Matrix:
 [[ 152   94]
  [  38 2640]]
 </pre>
+<p>Classification Models (Predicting 'Price_class')<br>
+K-Nearest Neighbors (KNN) Classifier:<br>
+
+Testing Accuracy: 95.48%<br>
+High Price_class: Precision: 80%, Recall: 62%, F1-score: 70%<br>
+Low Price_class: Precision: 97%, Recall: 99%, F1-score: 98%<br>
+Interpretation: Performed well overall, but struggled more with the 'High' price class, leading to a notable number of false negatives (94 instances where high-priced houses were predicted as low)</<br>p>
 
 <h3>5. Support Vector Machine (SVM)</h3>
 <pre>
@@ -190,6 +224,28 @@ Confusion Matrix:
 [[ 245    1]
  [  11 2667]]
 </pre>
+<p>
+  The Support Vector Machine (SVM) model achieved very high accuracy:<br>
+
+Training Accuracy: 99.70%<br>
+Testing Accuracy: 99.59%<br>
+The classification report for the test set shows excellent performance:<br>
+
+Precision for High Price_class: 96% (meaning 96% of houses predicted as 'High' were actually 'High').<br>
+Recall for High Price_class: 100% (meaning the model identified all actual 'High' priced houses).<br>
+Precision for Low Price_class: 100%.<br>
+Recall for Low Price_class: 100%.<br>
+The confusion matrix indicates that out of 2924 test samples:<br>
+<br>
+True Positives (High, High): 245<br>
+False Negatives (High, Low): 1 (one actual High house was predicted as Low)<br>
+False Positives (Low, High): 11 (eleven actual Low houses were predicted as High)<br>
+True Negatives (Low, Low): 2667<br>
+Overall, the SVM model shows exceptionally strong performance, especially in correctly classifying 'Low' priced houses and having a perfect recall for 'High' priced houses on the test set. There's a very slight tendency to misclassify 'Low' houses as 'High' (11 instances), but this is a minor issue given the overall accuracy.<br>
+
+
+</p>
+
 
 
 <table border="1" cellpadding="8">
@@ -238,6 +294,11 @@ This project shows that proper data preprocessing is more important than complex
 Random Forest Regressor achieved the best performance due to its ability to handle non-linear
 relationships and outliers.
 </p>
+
+<h1>Overall Summary.</h1>
+<h5>For the primary objective of house price prediction (regression), the Random Forest Regressor demonstrated the best performance, yielding the lowest MAE and RMSE on the test set. This highlights its effectiveness in handling the dataset's characteristics and non-linear relationships. For the supplementary price classification task, the Support Vector Machine (SVM) Classifier showed outstanding results, achieving near-perfect accuracy in categorizing houses into 'High' or 'Low' price brackets
+</h5>
+
 <h2>🚀 Technologies Used</h2>
 <ul>
 <li>Python</li>
@@ -250,6 +311,7 @@ relationships and outliers.
 
 <li>Jupyter Notebook</li>
 </ul>
+
 
 
 
