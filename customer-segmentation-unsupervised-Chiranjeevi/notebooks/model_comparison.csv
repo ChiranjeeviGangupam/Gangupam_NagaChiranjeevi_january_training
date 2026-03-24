@@ -1,0 +1,5 @@
+Model,Clusters,Silhouette,Davies_Bouldin
+KMeans,4,0.2929,1.0838
+Hierarchical,4,0.273,1.1448
+DBSCAN,9,-1.0,-1.0
+GMM,4,0.0715,1.8694
