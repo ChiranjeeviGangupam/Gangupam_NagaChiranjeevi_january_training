@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Spam Mail Detection using SVM</title>
-</head>
+<html>
+
 
 <body style="font-family: Arial, Helvetica, sans-serif; background-color: #f8fafc; color: #1f2937; padding: 20px; line-height: 1.6;">
 
