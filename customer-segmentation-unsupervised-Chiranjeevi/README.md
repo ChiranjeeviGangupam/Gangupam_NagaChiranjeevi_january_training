@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Customer Segmentation Project</title>
+<title>AI-Driven Customer Intelligence System</title>
 
 <style>
 body {
@@ -13,11 +13,6 @@ body {
 }
 h1, h2 {
     color: #2E86C1;
-}
-code {
-    background: #eee;
-    padding: 5px;
-    border-radius: 5px;
 }
 .section {
     background: white;
@@ -38,107 +33,94 @@ code {
     background: #2E86C1;
     color: white;
 }
+img {
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
 </style>
 </head>
 
 <body>
 
-<h1>🧠 AI-Driven Customer Segmentation System</h1>
+<h1>🧠 AI-Driven Customer Segmentation Using Unsupervised Machine Learning</h1>
 
+<!-- 1. Project Title -->
 <div class="section">
-<h2>📌 Project Purpose</h2>
-<p>
-This project uses unsupervised machine learning techniques to segment customers based on purchasing behavior. 
-The goal is to extract meaningful insights that can help businesses improve marketing strategies and customer retention.
-</p>
+<h2>📌 Project Title</h2>
+<p><b>AI-Driven Customer Intelligence System for Strategic Business Decision Making</b></p>
 </div>
 
+<!-- 2. Problem Statement -->
 <div class="section">
 <h2>🎯 Problem Statement</h2>
 <ul>
-<li><b>Objective:</b> Identify customer segments using clustering techniques</li>
-<li><b>Use Case:</b> Marketing optimization and customer targeting</li>
-<li><b>Expected Outcome:</b> Clear segmentation of customers into meaningful groups</li>
+<li>Identify customer segments using clustering techniques</li>
+<li>Improve marketing strategies and customer targeting</li>
+<li>Generate actionable business insights</li>
 </ul>
 </div>
 
+<!-- 3. Dataset -->
 <div class="section">
 <h2>📊 Dataset Description</h2>
 <ul>
 <li><b>Source:</b> UCI Machine Learning Repository</li>
 <li><b>Size:</b> 500,000+ records</li>
-<li><b>Features:</b> CustomerID, InvoiceDate, Quantity, UnitPrice</li>
+<li><b>Features:</b> CustomerID, Quantity, UnitPrice, InvoiceDate</li>
 <li><b>Preprocessing:</b>
     <ul>
-        <li>Removed missing values</li>
-        <li>Removed negative transactions</li>
+        <li>Handled missing values</li>
+        <li>Removed invalid transactions</li>
         <li>Created RFM features</li>
     </ul>
 </li>
 </ul>
 </div>
 
+<!-- 4. Algorithms -->
 <div class="section">
 <h2>⚙️ Algorithms Used</h2>
 
 <h3>KMeans</h3>
 <ul>
-<li>Groups data into k clusters</li>
-<li>Parameter: n_clusters</li>
-<li>Best for well-separated clusters</li>
+<li>Partitions data into k clusters</li>
+<li>Efficient and scalable</li>
 </ul>
 
 <h3>DBSCAN</h3>
 <ul>
 <li>Density-based clustering</li>
-<li>Parameters: eps, min_samples</li>
-<li>Detects noise/outliers</li>
+<li>Detects noise and outliers</li>
 </ul>
 
 <h3>Hierarchical</h3>
 <ul>
-<li>Builds tree-based clusters</li>
+<li>Tree-based clustering</li>
 <li>No need to predefine clusters</li>
-<li>Useful for small datasets</li>
 </ul>
 
 </div>
 
+<!-- 5. Run -->
 <div class="section">
-<h2>🚀 How to Run the Project</h2>
+<h2>🚀 How to Run Project</h2>
 
-<h3>Prerequisites</h3>
-<ul>
-<li>Python 3.9+</li>
-<li>pip or virtual environment</li>
-</ul>
-
-<h3>Setup</h3>
-<pre>
-python -m venv .venv
-.venv\Scripts\activate
-</pre>
-
-<h3>Install Dependencies</h3>
 <pre>
 pip install -r requirements.txt
-</pre>
-
-<h3>Run Project</h3>
-<pre>
 python main.py
 </pre>
 
-<h3>Reproducibility</h3>
-<ul>
-<li>Random seed used: 42</li>
-<li>Ensure same dataset for consistent results</li>
-</ul>
-
 </div>
 
+<!-- 6. Results -->
 <div class="section">
 <h2>📈 Key Results</h2>
+
+<ul>
+<li><b>Number of Clusters:</b> 4</li>
+<li><b>Best Algorithm:</b> KMeans</li>
+</ul>
 
 <table class="table">
 <tr>
@@ -167,58 +149,38 @@ python main.py
 </tr>
 </table>
 
-<p><b>Best Algorithm:</b> KMeans (highest silhouette, lowest DB index)</p>
-
 </div>
 
+<!-- Business Insights -->
 <div class="section">
 <h2>💡 Business Insights</h2>
 <ul>
-<li>💎 High-value customers → generate most revenue</li>
-<li>⚠️ At-risk customers → need retention strategies</li>
-<li>🛍 Budget customers → respond to discounts</li>
-<li>⚡ Frequent customers → good engagement</li>
+<li>💎 High-value customers → highest revenue</li>
+<li>⚠️ At-risk customers → need retention</li>
+<li>🛍 Budget customers → discount-based marketing</li>
+<li>⚡ Frequent customers → high engagement</li>
 </ul>
 </div>
 
+<!-- 7. Visualizations -->
 <div class="section">
-<h2>📊 Evaluation Metrics</h2>
-<ul>
-<li><b>Silhouette Score:</b> Higher is better</li>
-<li><b>Davies-Bouldin Index:</b> Lower is better</li>
-</ul>
+<h2>📊 Sample Visualizations</h2>
+
+<h3>PCA Cluster Visualization</h3>
+<img src="results/pca_outputs/pca_clusters.png">
+
+<h3>Cluster Distribution</h3>
+<img src="results/cluster_plots/cluster_distribution.png">
+
+<h3>Cluster Heatmap</h3>
+<img src="results/cluster_plots/cluster_heatmap.png">
+
 </div>
 
+<!-- Footer -->
 <div class="section">
-<h2>📊 Visualizations</h2>
-<ul>
-<li>PCA plots</li>
-<li>Cluster distribution</li>
-<li>Heatmaps</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>⚠️ Troubleshooting</h2>
-<ul>
-<li>Check dataset path</li>
-<li>Ensure required libraries installed</li>
-<li>Use correct Python interpreter</li>
-</ul>
-</div>
-
-
-
-<div class="section">
-<h2>👨‍💻 Contributors</h2>
-<p>GANGUPAM NAGA CHIRANJEEVI</p>
-</div>
-
-<div class="section">
-<h2>📌 Example Command</h2>
-<pre>
-python main.py --clusters 4
-</pre>
+<h2>👨‍💻 Contributor</h2>
+<p><b>Gangupam Naga Chiranjeevi</b></p>
 </div>
 
 </body>
